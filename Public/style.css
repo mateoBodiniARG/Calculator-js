@@ -1,0 +1,174 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* DARK MODE */
+    --bg-dark: #1c1c1c;
+    --bg-dark-alternative: #1c1c1c;
+    --text: #ececec;
+    --gray: #606060;
+    --gray-alternative:#2d2d2d;
+    --fontFamily:'Roboto', sans-serif;
+    --igualColor: rgba(17, 23, 80, 0.4);
+
+    /* LIGHT MODE */
+    --bg-Ligth: #ececec;
+    --bg-Ligt-Calculator: #ececec
+}
+
+body{
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontFamily);
+    background-image: url(./download.png);
+    object-fit: cover;
+    background-repeat: repeat;
+    background-size: 30vw;
+}
+
+.calculator{
+    grid-template-columns: repeat(4,1fr);
+    background-color: var(--gray-alternative);
+    color: var(--text);
+    display: grid;
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    gap: .5rem;
+    box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 17%), 0 0.6px 1.8px 0 rgb(0 0 0 / 15%);
+}
+
+.screen{
+    grid-column: 1/5;
+    background-color: var(--bg-dark);
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.btn{
+    font-size: 18px;
+    background-color: var(--gray-alternative);
+    color: var(--text);
+    border: none;
+    padding: 1.5rem .5rem;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: ease-in-out .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: var(--bg-dark)
+}
+
+#cero{
+    grid-column: span 2
+}
+
+#igual{
+    background-color: var(--igualColor);
+    grid-row: span 2
+}
+
+#igual:hover{
+    background-color: rgba(172, 175, 209, 0.4);
+}
+
+
+
+
+/* TOGGLE BUTTON */
+
+body {
+    transition: background-color .2s ease;
+  }
+  
+  .dark-mode {
+    background-color: var(--bg-Ligth);
+    color: #dbd9d9;
+  }
+  .dark-mode > .calculator{
+    background-color: var(--bg-Ligth);
+  }
+  .dark-mode > .calculator > .screen{
+    background-color: var(--gray)
+  }
+
+  .dark-mode > button{
+    background-color: red;
+  }
+
+ 
+
+
+
+
+  .toggle-switch {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .switch-label {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch-label .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch-label .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .switch-label .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .switch-label .checkbox:checked + .slider {
+    background-color: #0b1720;
+  }
+  
+  .switch-label .checkbox:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+
+  
+  
