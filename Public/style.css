@@ -110,17 +110,9 @@ body {
     background-color: var(--gray)
   }
 
-  .dark-mode > button{
-    background-color: red;
-  }
-
- 
-
-
-
-
   .toggle-switch {
     display: inline-block;
+    align-items: end;
     vertical-align: middle;
   }
   
